@@ -6,17 +6,14 @@ describe Dice do
       dice = Dice.new
       expect(dice).to be_kind_of(Dice)
     end
-
     it 'responds to a method called roll_dice' do
       dice = Dice.new
       expect(dice).to respond_to(:roll_dice)
     end
-
     it 'returns a number between 1 and 6' do
       dice = Dice.new
       expect(dice.roll_dice[0]).to be_between(1, 6).inclusive
     end
-
     it 'returns a random number between 1 and 6' do
       dice = Dice.new
       rolls = []
